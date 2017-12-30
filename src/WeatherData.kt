@@ -26,8 +26,11 @@ class WeatherData : Observable() {
         this@WeatherData.humidity = humidity
         this@WeatherData.pressure = pressure
 
-        setChanged()
+        measurementsChanged()
+    }
 
+    private fun measurementsChanged() {
+        setChanged()
         notifyObservers()
     }
 }
